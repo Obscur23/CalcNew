@@ -60,21 +60,23 @@ public class Base {
                 System.out.println("Bye!");
                 break;
             case 2 :
+            //Большее слово в массиве
                 System.out.println("How Much Words?");
                 int len = in.nextInt();
                 //Запрос длины массива
                 String[] words = new String[len];
                 for (int i = 0; i<len; i++ ){
-                    System.out.println("Type Word "+i);
+                    System.out.println("Type Word "+(i+1));
                     words[i] = in.next();
                     //Заполнение массива
                 }
-                String maxWord = words [1];
+                String maxWord = words [0];
                 for (int i = 1; i<len; i++ ){
                     int len1 = maxWord.length();
                     int len2 = words[i].length();
                     if (len1 < len2){
                         maxWord = words[i];
+                    //Логика
                     }
                 }
                 System.out.println("Biggest Word is "+maxWord);
