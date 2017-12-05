@@ -1,5 +1,3 @@
-package Calculator;
-
 import java.util.Scanner;
 
 /**
@@ -11,9 +9,10 @@ public class Base {
         Scanner in = new Scanner(System.in);
         System.out.println("Calc - 1, Array - 2");
         int choise = in.nextInt();
+        System.out.println(choise);
         //Инициализируем сканер
         switch (choise) {
-            case '1':
+            case 1 :
                 boolean cycle;
                 //Инициализируем переменную цикла повторений
                 do {
@@ -60,19 +59,18 @@ public class Base {
                 } while (cycle);
                 System.out.println("Bye!");
                 break;
-            case '2':
-                Scanner in = new Scanner(System.in);
+            case 2 :
                 System.out.println("How Much Words?");
                 int len = in.nextInt();
                 //Запрос длины массива
                 String[] words = new String[len];
-                for (int i = 0; i<len; i++ ){
+                for (int i = 1; i<len; i++ ){
                     System.out.println("Type Word "+i);
                     words[i] = in.next();
                     //Заполнение массива
                 }
-                String maxWord = words [0];
-                for (int i = 1; i<len; i++ ){
+                String maxWord = words [1];
+                for (int i = 2; i<len; i++ ){
                     int len1 = maxWord.length();
                     int len2 = words[i].length();
                     if (len1 < len2){
