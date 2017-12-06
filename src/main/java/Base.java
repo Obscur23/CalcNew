@@ -2,14 +2,13 @@ import java.util.Scanner;
 
 /**
  * @author Anton U.
- * Калькулятор - 4 действия без проверок ввода
+ * Калькулятор + определение самого длинного слова
  */
 public class Base {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Calc - 1, Array - 2");
         int choise = in.nextInt();
-        System.out.println(choise);
         //Инициализируем сканер
         switch (choise) {
             case 1 :
@@ -61,7 +60,7 @@ public class Base {
                 break;
             case 2 :
             //Большее слово в массиве
-                System.out.println("How Much Words?");
+                System.out.println("How many words?");
                 int len = in.nextInt();
                 //Запрос длины массива
                 String[] words = new String[len];
@@ -74,6 +73,8 @@ public class Base {
                 for (int i = 1; i<len; i++ ){
                     int len1 = maxWord.length();
                     int len2 = words[i].length();
+                    //сравнение length напрямую не сработало, или я что-то сделал не так)
+                    // добавил буферные переменные
                     if (len1 < len2){
                         maxWord = words[i];
                     //Логика
